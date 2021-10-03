@@ -28,7 +28,7 @@
         </div>
         <div class="form-group">
             <label>Phone</label>
-            <input type="text" name="sphone" />
+            <input type="text" name="sphone" maxlength="11" />
         </div>
         <input class="submit" type="submit" value="Save" />
     </form>

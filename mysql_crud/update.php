@@ -52,7 +52,7 @@
                     </div>
                     <div class="form-group">
                         <label>Phone</label>
-                        <input type="text" name="sphone" value="<?php echo $row['sphone']; ?>" />
+                        <input type="text" name="sphone" value="<?php echo $row['sphone']; ?>" maxlength="11" />
                     </div>
                     <input class="submit" type="submit" value="Update" />
                 </form>
