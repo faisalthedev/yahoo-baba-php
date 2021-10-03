@@ -542,3 +542,12 @@ i.fa{
 /* ===================== */
 /* FrontEnd CSS END */
 /* ===================== */
+
+/*
+    custom css for modifying syle
+*/
+.form-warning {
+    color: red;
+    text-align: center;
+    margin: 10px auto;
+}
