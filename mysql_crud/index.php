@@ -4,7 +4,8 @@ include 'header.php';
 <div id="main-content">
     <h2>All Records</h2>
     <?php
-    $conn = mysqli_connect('localhost', 'root', 'root', 'crud') or die('Connection Failed!');
+    // include config
+    include 'config.php';
     $sql = "SELECT * FROM student JOIN studentclass WHERE student.sclass = studentclass.cid";
     $result = mysqli_query($conn, $sql) or die('Query uncessful!');
 

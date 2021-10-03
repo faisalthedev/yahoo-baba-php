@@ -13,7 +13,8 @@
     if (isset($_POST['showbtn'])) :
         $stu_id = $_POST['sid'];
 
-        $conn = mysqli_connect('localhost', 'root', 'root', 'crud') or die('Connection Failed!');
+        // include config
+        include 'config.php';
         $sql = "SELECT * FROM student WHERE sid={$stu_id}";
         $result = mysqli_query($conn, $sql) or die('Query uncessful!');
 
