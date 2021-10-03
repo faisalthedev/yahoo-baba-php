@@ -52,7 +52,7 @@ if (isset($_POST['save'])) {
                     <div class="form-group">
                         <label>User Role</label>
                         <select class="form-control" name="role">
-                            <option value="0">Normal User</option>
+                            <option value="0">Subscriber</option>
                             <option value="1">Admin</option>
                         </select>
                     </div>
