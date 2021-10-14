@@ -2,6 +2,7 @@
 include 'header.php';
 include 'config.php';
 ?>
+
 <div id="main-content">
     <div class="container">
         <div class="row">
@@ -49,7 +50,7 @@ include 'config.php';
                                     </div>
                                     <div class="col-md-8">
                                         <div class="inner-content clearfix">
-                                            <h3><a href='single.php'><?php echo $row['title']; ?></a></h3>
+                                            <h3><a href='single.php?id=<?php echo $row['post_id']; ?>'><?php echo $row['title']; ?></a></h3>
                                             <div class="post-information">
                                                 <span>
                                                     <i class="fa fa-tags" aria-hidden="true"></i>
@@ -57,7 +58,7 @@ include 'config.php';
                                                 </span>
                                                 <span>
                                                     <i class="fa fa-user" aria-hidden="true"></i>
-                                                    <a href='author.php?id=<?php echo $row['author']; ?>'><?php echo $row['first_name'] . ' ' . $row['last_name']; ?></a>
+                                                    <a href='author.php?aid=<?php echo $row['author']; ?>'><?php echo $row['first_name'] . ' ' . $row['last_name']; ?></a>
                                                 </span>
                                                 <span>
                                                     <i class="fa fa-calendar" aria-hidden="true"></i>

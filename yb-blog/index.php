@@ -1,4 +1,8 @@
-<?php include 'header.php'; ?>
+<?php
+include 'header.php';
+include "config.php";
+?>
+
 <div id="main-content">
     <div class="container">
         <div class="row">
@@ -7,8 +11,6 @@
                 <div class="post-container">
 
                     <?php
-                    include "config.php";
-
                     // calculate offset
                     $limit = 5;
                     if (isset($_GET['page'])) {
@@ -43,7 +45,7 @@
                                                 </span>
                                                 <span>
                                                     <i class="fa fa-user" aria-hidden="true"></i>
-                                                    <a href='author.php'><?php echo $row['first_name'] . ' ' . $row['last_name']; ?></a>
+                                                    <a href='author.php?aid=<?php echo $row['author']; ?>'><?php echo $row['first_name'] . ' ' . $row['last_name']; ?></a>
                                                 </span>
                                                 <span>
                                                     <i class="fa fa-calendar" aria-hidden="true"></i>
