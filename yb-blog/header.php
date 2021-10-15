@@ -73,7 +73,20 @@ switch ($page) {
             <div class="row">
                 <!-- LOGO -->
                 <div class=" col-md-offset-4 col-md-4">
-                    <a href="<?php echo $hostname; ?>" id="logo"><img src="images/news.jpg"></a>
+                    <?php
+                    $sql = "SELECT * FROM settings";
+                    $result = mysqli_query($conn, $sql) or die("Query Failed.");
+
+                    if (mysqli_num_rows($result) > 0) :
+                        while ($row = mysqli_fetch_assoc($result)) :
+                            if ($row['site_logo'] == '') {
+                                printf("<a href='%s'><h1>%</h1></a>", $hostname, $row['site_title']);
+                            } else {
+                                printf("<a href='%s'><img src='images/%s' alt='%s'></a>", $hostname, $row['site_logo'], $row['site_title']);
+                            }
+                        endwhile;
+                    endif;
+                    ?>
                 </div>
                 <!-- /LOGO -->
             </div>
