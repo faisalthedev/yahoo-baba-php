@@ -2,8 +2,10 @@
 include 'header.php';
 include 'config.php';
 
-if (isset($_GET['search'])) {
+if (isset($_GET['search']) && !empty($_GET['search'])) {
     $search_term = mysqli_real_escape_string($conn, $_GET['search']);
+} else {
+    $search_term = "No search term found";
 }
 ?>
 <div id="main-content">
