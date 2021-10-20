@@ -21,6 +21,6 @@ class derived extends base
   }
 }
 
-$test = new base();
+$test = new base(5, 4);
 
 echo $test->calc(5, 10);
